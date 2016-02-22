@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notam table</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+<form action="/notam/load_notam" method="post" class="upload-notam"
+      enctype="multipart/form-data" accept-charset="UTF-8">
+  <input type="hidden">
+    <span class="link header-link">Import NOTAM data</span>
+  <input type="file" name="file" id="fileUpload" can-change="submitForm">
+  <input type="submit" name="Let's draw the table!">
+</form>
+<br />
+</body>
+</html>

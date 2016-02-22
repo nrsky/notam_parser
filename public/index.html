@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test rails app</title>
+</head>
+<body>
+<form action="/notam/load_notam" method="post" class="upload-notam"
+      enctype="multipart/form-data" accept-charset="UTF-8">
+    <input type="hidden">
+                <span class="link header-link">
+                   Import NOTAM data
+                </span>
+    <input type="file" name="file" id="fileUpload" can-change="submitForm">
+    <input type="submit" name="Let's draw the table!">
+</form>
+</body>
+</html>

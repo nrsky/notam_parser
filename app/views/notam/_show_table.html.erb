@@ -1,0 +1,23 @@
+<div>
+  <table border="1" style="width:100%">
+    <thead>
+    <tr>
+      <th>ICAO Code</th>
+      <th>MON</th>
+      <th>TUE</th>
+      <th>WED</th>
+      <th>THU</th>
+      <th>FRI</th>
+      <th>SAT</th>
+      <th>SUN</th>
+    </tr>
+    </thead>
+    <% @parsed_data.each do |notam_element| %>
+      <tr>
+        <% notam_element.each do |column| %>
+            <td><%=column %></td>
+        <% end%>
+      </tr>
+    <% end%>
+  </table>
+</div>
